@@ -1,0 +1,41 @@
+{
+    "name": "Manufacturing - Electronics Assembly Line",
+    "description": "Production line simulation for electronics manufacturing. Models PCB assembly through testing and packaging. Useful for line balancing and throughput optimization.",
+    "tasks": {
+        "PCB Preparation": {"distribution": "normal_dist", "parameters": [5, 1]},
+        "Component Placement": {"distribution": "normal_dist", "parameters": [12, 2]},
+        "Soldering": {"distribution": "uniform_dist", "parameters": [8, 12]},
+        "Quality Inspection": {"distribution": "normal_dist", "parameters": [6, 1.5]},
+        "Functional Test": {"distribution": "exponential_dist", "parameters": [10]},
+        "Packaging": {"distribution": "uniform_dist", "parameters": [3, 5]}
+    },
+    "workers": [
+        {"id": "Station-1A", "tasks": ["PCB Preparation"], "max_queue_size": 5},
+        {"id": "Station-1B", "tasks": ["PCB Preparation"], "max_queue_size": 5},
+        {"id": "Station-2A", "tasks": ["Component Placement"], "max_queue_size": 3},
+        {"id": "Station-2B", "tasks": ["Component Placement"], "max_queue_size": 3},
+        {"id": "Station-3A", "tasks": ["Soldering"], "max_queue_size": 3},
+        {"id": "Station-3B", "tasks": ["Soldering"], "max_queue_size": 3},
+        {"id": "Station-4", "tasks": ["Quality Inspection"], "max_queue_size": 4},
+        {"id": "Station-5A", "tasks": ["Functional Test"], "max_queue_size": 2},
+        {"id": "Station-5B", "tasks": ["Functional Test"], "max_queue_size": 2},
+        {"id": "Station-6", "tasks": ["Packaging"], "max_queue_size": 6}
+    ],
+    "products": [
+        {"id": "Unit-001", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]},
+        {"id": "Unit-002", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]},
+        {"id": "Unit-003", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]},
+        {"id": "Unit-004", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]},
+        {"id": "Unit-005", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]},
+        {"id": "Unit-006", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]},
+        {"id": "Unit-007", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]},
+        {"id": "Unit-008", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]},
+        {"id": "Unit-009", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]},
+        {"id": "Unit-010", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]},
+        {"id": "Unit-011", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]},
+        {"id": "Unit-012", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]},
+        {"id": "Unit-013", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]},
+        {"id": "Unit-014", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]},
+        {"id": "Unit-015", "tasks": ["PCB Preparation", "Component Placement", "Soldering", "Quality Inspection", "Functional Test", "Packaging"]}
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "name": "Healthcare - Emergency Department Patient Flow",
+    "description": "Hospital ED simulation modeling patient flow from triage through treatment to discharge. Useful for capacity planning and wait time analysis.",
+    "tasks": {
+        "Triage": {"distribution": "uniform_dist", "parameters": [5, 10]},
+        "Registration": {"distribution": "normal_dist", "parameters": [8, 2]},
+        "Examination": {"distribution": "normal_dist", "parameters": [20, 8]},
+        "Treatment": {"distribution": "exponential_dist", "parameters": [25]},
+        "Discharge": {"distribution": "uniform_dist", "parameters": [10, 15]}
+    },
+    "workers": [
+        {"id": "Nurse-01", "tasks": ["Triage", "Treatment", "Discharge"], "max_queue_size": 3},
+        {"id": "Nurse-02", "tasks": ["Triage", "Treatment", "Discharge"], "max_queue_size": 3},
+        {"id": "Admin-01", "tasks": ["Registration", "Discharge"], "max_queue_size": 4},
+        {"id": "Doctor-01", "tasks": ["Examination", "Treatment"], "max_queue_size": 2},
+        {"id": "Doctor-02", "tasks": ["Examination", "Treatment"], "max_queue_size": 2}
+    ],
+    "products": [
+        {"id": "Patient-01", "tasks": ["Triage", "Registration", "Examination", "Treatment", "Discharge"]},
+        {"id": "Patient-02", "tasks": ["Triage", "Registration", "Examination", "Treatment", "Discharge"]},
+        {"id": "Patient-03", "tasks": ["Triage", "Registration", "Examination", "Treatment", "Discharge"]},
+        {"id": "Patient-04", "tasks": ["Triage", "Registration", "Examination", "Treatment", "Discharge"]},
+        {"id": "Patient-05", "tasks": ["Triage", "Registration", "Examination", "Treatment", "Discharge"]},
+        {"id": "Patient-06", "tasks": ["Triage", "Registration", "Examination", "Treatment", "Discharge"]},
+        {"id": "Patient-07", "tasks": ["Triage", "Registration", "Examination", "Treatment", "Discharge"]},
+        {"id": "Patient-08", "tasks": ["Triage", "Registration", "Examination", "Treatment", "Discharge"]}
+    ]
+}

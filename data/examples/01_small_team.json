@@ -1,0 +1,21 @@
+{
+    "name": "Small Team - Loan Processing",
+    "description": "A small bank branch with 3 loan officers processing 5 loan applications",
+    "tasks": {
+        "Document Review": {"distribution": "normal_dist", "parameters": [15, 3]},
+        "Credit Check": {"distribution": "uniform_dist", "parameters": [10, 20]},
+        "Approval Decision": {"distribution": "normal_dist", "parameters": [8, 2]}
+    },
+    "workers": [
+        {"id": "01", "tasks": ["Document Review", "Credit Check", "Approval Decision"], "max_queue_size": 2},
+        {"id": "02", "tasks": ["Document Review", "Credit Check"], "max_queue_size": 2},
+        {"id": "03", "tasks": ["Credit Check", "Approval Decision"], "max_queue_size": 2}
+    ],
+    "products": [
+        {"id": "01", "tasks": ["Document Review", "Credit Check", "Approval Decision"]},
+        {"id": "02", "tasks": ["Document Review", "Credit Check", "Approval Decision"]},
+        {"id": "03", "tasks": ["Document Review", "Credit Check", "Approval Decision"]},
+        {"id": "04", "tasks": ["Document Review", "Credit Check", "Approval Decision"]},
+        {"id": "05", "tasks": ["Document Review", "Credit Check", "Approval Decision"]}
+    ]
+}

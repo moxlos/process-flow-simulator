@@ -1,0 +1,63 @@
+{
+    "tasks": {
+        "Funding Approval": {
+            "distribution": "normal_dist",
+            "parameters": [
+                10.0,
+                2.0
+            ]
+        },
+        "Application Inspection": {
+            "distribution": "normal_dist",
+            "parameters": [
+                10.0,
+                2.0
+            ]
+        },
+        "Payment": {
+            "distribution": "normal_dist",
+            "parameters": [
+                10.0,
+                2.0
+            ]
+        }
+    },
+    "workers": [
+        {
+            "id": "01",
+            "tasks": [
+                "Funding Approval",
+                "Application Inspection",
+                "Payment"
+            ],
+            "max_queue_size": 3
+        },
+        {
+            "id": "02",
+            "tasks": [
+                "Funding Approval",
+                "Application Inspection",
+                "Payment"
+            ],
+            "max_queue_size": 3
+        }
+    ],
+    "products": [
+        {
+            "id": "01",
+            "tasks": [
+                "Funding Approval",
+                "Application Inspection",
+                "Payment"
+            ]
+        },
+        {
+            "id": "02",
+            "tasks": [
+                "Funding Approval",
+                "Application Inspection",
+                "Payment"
+            ]
+        }
+    ]
+}

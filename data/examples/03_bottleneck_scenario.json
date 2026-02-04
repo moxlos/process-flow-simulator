@@ -1,0 +1,29 @@
+{
+    "name": "Bottleneck Analysis - Permit Processing",
+    "description": "City permit office with a bottleneck at inspection stage (only 1 inspector). Use this to analyze how bottlenecks affect throughput.",
+    "tasks": {
+        "Application Entry": {"distribution": "uniform_dist", "parameters": [5, 8]},
+        "Inspection": {"distribution": "normal_dist", "parameters": [30, 5]},
+        "Final Approval": {"distribution": "uniform_dist", "parameters": [5, 10]}
+    },
+    "workers": [
+        {"id": "01", "tasks": ["Application Entry"], "max_queue_size": 5},
+        {"id": "02", "tasks": ["Application Entry"], "max_queue_size": 5},
+        {"id": "03", "tasks": ["Application Entry"], "max_queue_size": 5},
+        {"id": "04", "tasks": ["Inspection"], "max_queue_size": 2},
+        {"id": "05", "tasks": ["Final Approval"], "max_queue_size": 5},
+        {"id": "06", "tasks": ["Final Approval"], "max_queue_size": 5}
+    ],
+    "products": [
+        {"id": "01", "tasks": ["Application Entry", "Inspection", "Final Approval"]},
+        {"id": "02", "tasks": ["Application Entry", "Inspection", "Final Approval"]},
+        {"id": "03", "tasks": ["Application Entry", "Inspection", "Final Approval"]},
+        {"id": "04", "tasks": ["Application Entry", "Inspection", "Final Approval"]},
+        {"id": "05", "tasks": ["Application Entry", "Inspection", "Final Approval"]},
+        {"id": "06", "tasks": ["Application Entry", "Inspection", "Final Approval"]},
+        {"id": "07", "tasks": ["Application Entry", "Inspection", "Final Approval"]},
+        {"id": "08", "tasks": ["Application Entry", "Inspection", "Final Approval"]},
+        {"id": "09", "tasks": ["Application Entry", "Inspection", "Final Approval"]},
+        {"id": "10", "tasks": ["Application Entry", "Inspection", "Final Approval"]}
+    ]
+}

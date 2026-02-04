@@ -1,0 +1,44 @@
+{
+    "name": "Large Team - Insurance Claims",
+    "description": "Insurance company claims department with 10 adjusters processing 20 claims",
+    "tasks": {
+        "Initial Review": {"distribution": "normal_dist", "parameters": [10, 2]},
+        "Documentation": {"distribution": "uniform_dist", "parameters": [15, 25]},
+        "Assessment": {"distribution": "normal_dist", "parameters": [20, 5]},
+        "Final Approval": {"distribution": "exponential_dist", "parameters": [8]}
+    },
+    "workers": [
+        {"id": "01", "tasks": ["Initial Review", "Documentation"], "max_queue_size": 3},
+        {"id": "02", "tasks": ["Initial Review", "Documentation"], "max_queue_size": 3},
+        {"id": "03", "tasks": ["Initial Review", "Assessment"], "max_queue_size": 3},
+        {"id": "04", "tasks": ["Documentation", "Assessment"], "max_queue_size": 3},
+        {"id": "05", "tasks": ["Documentation", "Assessment"], "max_queue_size": 3},
+        {"id": "06", "tasks": ["Assessment", "Final Approval"], "max_queue_size": 3},
+        {"id": "07", "tasks": ["Assessment", "Final Approval"], "max_queue_size": 3},
+        {"id": "08", "tasks": ["Final Approval"], "max_queue_size": 3},
+        {"id": "09", "tasks": ["Initial Review", "Documentation", "Assessment"], "max_queue_size": 2},
+        {"id": "10", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"], "max_queue_size": 2}
+    ],
+    "products": [
+        {"id": "01", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "02", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "03", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "04", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "05", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "06", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "07", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "08", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "09", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "10", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "11", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "12", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "13", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "14", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "15", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "16", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "17", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "18", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "19", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]},
+        {"id": "20", "tasks": ["Initial Review", "Documentation", "Assessment", "Final Approval"]}
+    ]
+}
