@@ -16,6 +16,12 @@ This simulation tool allows users to:
 - **Run simulations** and visualize task assignments with interactive Gantt charts
 - **Analyze performance** through comprehensive metrics and analytics dashboards
 
+<img width="2508" height="1222" alt="Screenshot from 2026-02-04 3" src="https://github.com/user-attachments/assets/dc8d1d56-8188-477c-9292-55f409d029de" />
+<img width="2508" height="1222" alt="Screenshot from 2026-02-04 2" src="https://github.com/user-attachments/assets/2417eb46-b305-4a59-9473-1919bffff09f" />
+<img width="2508" height="1222" alt="Screenshot from 2026-02-04" src="https://github.com/user-attachments/assets/8ccb002c-98d5-4436-8cce-b01c66048e27" />
+
+
+
 ## Features
 
 ### Simulation Engine
